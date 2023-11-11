@@ -1,0 +1,23 @@
+
+.titleApp {
+    font-family: "Segoe UI";
+    font-size: 25px;
+    padding-left: 1rem;
+}
+
+.toolbarMenu {
+    padding: 2rem;
+    text-align: center;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.btToolbar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 2rem;
+}
+  

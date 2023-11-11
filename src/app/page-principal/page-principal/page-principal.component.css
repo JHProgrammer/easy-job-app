@@ -1,0 +1,23 @@
+
+.title-page {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.grid-page-principal{
+    background-color: lightskyblue;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.div_buttons {
+    margin-top: 5rem;
+}
+
+.button-pg{
+    margin-left:5rem;
+    margin-right: 5rem;
+    font-size: 20px;
+    width:240px;
+    height:100px;
+}

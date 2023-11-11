@@ -1,0 +1,40 @@
+<div class="create-edit-employeer">
+    
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <mat-label class="titleForm">Registro de Empleados</mat-label>
+        <br>
+        <br>
+        <mat-form-field appearance="outline" class="fieldFormCU">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" formControlName="nameEmployer">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="fieldFormCU">
+            <mat-label>Edad</mat-label>
+            <input matInput placeholder="Edad" formControlName="age_employer">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="fieldFormCU">
+            <mat-label>Ciudad</mat-label>
+            <input matInput placeholder="Ciudad" formControlName="city_employer">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="fieldFormCU">
+            <mat-label>Telefono</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="phone_employer">
+            <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="fieldFormCU">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="email_employer">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        <br>
+        <div class="groupButton">
+            <button mat-raised-button type="submit" color="primary">{{tipoAccion}}</button>
+            <button mat-raised-button color="warn" routerLink="/authors">Cancelar</button>
+        </div>
+        <p>{{mensaje}}</p>
+    </form>
+</div>
