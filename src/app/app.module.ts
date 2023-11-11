@@ -33,6 +33,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { DialogoComponent } from './worker/listar/dialogo/dialogo.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { WorkerCreateEditComponent } from './worker/worker-create-edit/worker-create-edit.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 
 @NgModule({
@@ -43,7 +46,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     CreateEditComponent,
     WorkerComponent,
     ListarComponent,
-    DialogoComponent
+    DialogoComponent,
+    WorkerCreateEditComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     HttpClientModule,
     MatPaginatorModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

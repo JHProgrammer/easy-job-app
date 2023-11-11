@@ -16,14 +16,18 @@ export class WorkerModelService {
     return this.http.get<WorkerModel[]> (this.url + "getAllWorkers");
   }
 
-  insert(EmployeerModel:WorkerModel){
-    return this.http.post(this.url+ 'employeer/register', EmployeerModel);
+  listId(id:number){
+    return this.http.get<WorkerModel>(this.url+"worker/"+id);
   }
-  update(aut: WorkerModel){
-    return this.http.put(this.url + "EmployeerModel", aut);
+
+  insert(workerModel:WorkerModel){
+    return this.http.post(this.url+ 'worker/register', workerModel);
+  }
+  update(worker: WorkerModel){
+    return this.http.put(this.url + "worker/update", worker);
   }
   delete(id:string){
-    return this.http.delete(this.url + "EmployeerModel/" + id);
+    return this.http.delete(this.url + "worker/" + id);
   }
 
   setList(listaNueva : WorkerModel[]){

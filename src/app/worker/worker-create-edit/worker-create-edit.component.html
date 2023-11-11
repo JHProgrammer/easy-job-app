@@ -1,0 +1,88 @@
+<div class="create-edit-worker">
+  <form [formGroup]="form" (submit)="aceptar()">
+    <!-- <mat-form-field class="example-full-width">
+        <mat-label>Código</mat-label>
+        <input matInput hidden placeholder="Código" formControlName="id">
+      </mat-form-field> -->
+    <br />
+    <mat-label class="titleForm">{{ titulo }} de Trabajadores</mat-label>
+    <br />
+    <br />
+    <mat-form-field class="example-full-width" class="fieldFormCU">
+      <mat-label>Nombre</mat-label>
+      <input
+        matInput
+        required
+        placeholder="Name"
+        formControlName="name_worker"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width" class="fieldFormCU">
+      <mat-label>Edad</mat-label>
+      <input
+        matInput
+        required
+        placeholder="Edad"
+        formControlName="age_worker"
+      />
+    </mat-form-field>
+    <br />
+    <!-- <mat-form-field appearance="fill">
+        <mat-label>Birthday</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthDateAuthor"
+        max="maxFecha">
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+    <mat-form-field class="example-full-width" class="fieldFormCU">
+      <mat-label>Direccion</mat-label>
+      <input
+        matInput
+        required
+        placeholder="Direccion"
+        formControlName="address_worker"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width" class="fieldFormCU">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        required
+        placeholder="Email"
+        formControlName="email_worker"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width" class="fieldFormCU">
+      <mat-label>Celular</mat-label>
+      <input
+        matInput
+        required
+        placeholder="Celular"
+        formControlName="phone_worker"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width" class="fieldFormCU">
+      <mat-label>Ciudad</mat-label>
+      <input
+        matInput
+        required
+        placeholder="Ciudad"
+        formControlName="city_worker"
+      />
+    </mat-form-field>
+    <br />
+    <div class="groupButton">
+      <button mat-raised-button type="submit" color="primary">{{tituloBoton}}</button>
+      <button mat-raised-button color="warn" routerLink="/authors">
+        Cancelar
+      </button>
+    </div>
+
+    <p>{{ mensaje }}</p>
+  </form>
+</div>

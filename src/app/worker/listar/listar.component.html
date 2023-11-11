@@ -3,11 +3,12 @@
   <div class="searchNav">
     <mat-form-field appearance="outline" class="inputSearch">
         <!-- <mat-label>Nombre</mat-label> -->
-        <input matInput  placeholder="Buscar por nombre">
+        
+        <input matInput (keyup) = "filtrar($event)" placeholder="Buscar Trabajador">
         
     </mat-form-field>
-    
-    <button class="btCreateWorker" (click)="onRegisterWorker()"  mat-raised-button>Crear</button>
+    <button class="btCreateWorker"  mat-raised-button [routerLink]="'/worker/nuevo'">Nuevo</button>
+    <!-- <button class="btCreateWorker" (click)="onRegisterWorker()"  mat-raised-button>Crear</button> -->
   </div>
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
@@ -66,7 +67,7 @@
           <button
             mat-raised-button
             color="primary"
-            [routerLink]="['/authors/edicion', element.id]"
+            [routerLink]="['/worker/edicion', element.id]"
           >
             <span class="material-icons">update</span>
           </button>
