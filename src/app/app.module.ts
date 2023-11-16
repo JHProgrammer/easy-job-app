@@ -35,7 +35,10 @@ import { DialogoComponent } from './worker/listar/dialogo/dialogo.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { WorkerCreateEditComponent } from './worker/worker-create-edit/worker-create-edit.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { OccupationComponent } from './occupation/occupation.component';
+import { OccupationListComponent } from './occupation/occupation-list/occupation-list.component';
 
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -47,7 +50,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     WorkerComponent,
     ListarComponent,
     DialogoComponent,
-    WorkerCreateEditComponent
+    WorkerCreateEditComponent,
+    OccupationComponent,
+    OccupationListComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +70,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatPaginatorModule,
     MatTableModule,
     MatDialogModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

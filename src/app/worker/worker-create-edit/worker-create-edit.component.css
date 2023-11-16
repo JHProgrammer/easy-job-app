@@ -1,5 +1,6 @@
 .create-edit-worker{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin:1rem auto;
@@ -7,6 +8,12 @@
     max-width: 100%;
   }
 
+.gridOneForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 .titleForm{
   font-size: 28px;

@@ -15,9 +15,7 @@ import { DialogoComponent } from './dialogo/dialogo.component';
   styleUrls: ['./listar.component.css']
 })
 export class ListarComponent implements OnInit{
-onRegisterWorker() {
-  
-}
+
   lista: WorkerModel[] = [];
   displayedColumns = ['id', 'name_worker', 'age_worker', 'address_worker','email_worker','phone_worker','city_worker','accion01','accion02'];
   dataSource = new MatTableDataSource<WorkerModel>();

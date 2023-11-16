@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgIterable } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { WorkerModel } from 'src/app/model/worker';
 import * as moment from 'moment';
 import { WorkerModelService } from 'src/app/service/worker.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { OccupationModel } from 'src/app/model/occupation';
+import { OccupationService } from 'src/app/service/occupation.service';
 
 @Component({
   selector: 'app-worker-create-edit',
@@ -13,7 +15,9 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class WorkerCreateEditComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   worker: WorkerModel = new WorkerModel();
+  occupations: NgIterable<OccupationModel> = [];
   titulo: string = 'Registro';
+  selectedValue: string = '';
   tituloBoton: string = 'Registrar';
   mensaje: string = '';
   maxFecha: Date = moment().add(1, 'days').toDate();
@@ -23,7 +27,8 @@ export class WorkerCreateEditComponent implements OnInit {
   constructor(
     private workerService: WorkerModelService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private occupationService: OccupationService
   ) {}
 
   ngOnInit(): void {
@@ -33,6 +38,14 @@ export class WorkerCreateEditComponent implements OnInit {
       this.titulo = this.edicion ? 'Edición' : 'Registro';
       this.tituloBoton = this.edicion ? 'Editar' : 'Registrar';
       this.init();
+
+      //Consumir occupations
+      this.occupationService
+        .list()
+        .subscribe((data) => {
+          this.occupations= data;
+          console.log("data occupations from worker",data);
+        });
     });
 
     this.form = new FormGroup({
