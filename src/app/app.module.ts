@@ -35,6 +35,11 @@ import { DialogoComponent } from './worker/listar/dialogo/dialogo.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { WorkerCreateEditComponent } from './worker/worker-create-edit/worker-create-edit.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { CreateServiceContractComponent } from './employeer/create-service-contract/create-service-contract.component';
+import { ListServiceContractComponent } from './employeer/list-service-contract/list-service-contract.component';
+import { ListServiceContractsPerDateComponent } from './employeer/list-service-contracts-per-date/list-service-contracts-per-date.component';
+import { RegisterContractComponent } from './worker/register-contract/register-contract.component';
+import { ListarContractMontoComponent } from './worker/listar-contract-monto/listar-contract-monto.component';
 
 
 
@@ -47,7 +52,12 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     WorkerComponent,
     ListarComponent,
     DialogoComponent,
-    WorkerCreateEditComponent
+    WorkerCreateEditComponent,
+    CreateServiceContractComponent,
+    ListServiceContractComponent,
+    ListServiceContractsPerDateComponent,
+    RegisterContractComponent,
+    ListarContractMontoComponent
   ],
   imports: [
     BrowserModule,

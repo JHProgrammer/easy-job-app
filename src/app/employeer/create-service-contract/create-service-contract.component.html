@@ -1,0 +1,40 @@
+<div class="create-service-contract">
+    
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <mat-label class="titleForm">CREA TU CONTRATO</mat-label>
+        <br>
+        <br>
+        <mat-form-field appearance="outline" class="fieldFormCU">
+            <mat-label>Ingresa tu ID</mat-label>
+            <input matInput placeholder="ID" formControlName="serviceType">
+        </mat-form-field>
+
+            <mat-hint>MM/DD/YYYY</mat-hint>
+        <br>
+        <mat-form-field appearance="outline" class="fieldFormCU">
+            <mat-label>Selecciona la fecha</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="employeer">
+
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        <br>
+
+        <br>
+        <mat-form-field appearance="outline" class="fieldFormCU">
+            <mat-label>Ingresa una descripción</mat-label>
+            <input matInput placeholder="Descripcion" formControlName="descripcion">
+        </mat-form-field>
+        <br>
+
+          
+        <br>
+        <div class="groupButton">
+            <button mat-raised-button type="submit" color="primary">{{tipoAccion}}</button>
+            <button mat-raised-button color="warn" routerLink="/nombreDeRuta">Cancelar</button>
+            <button mat-raised-button color="submit" routerLink="/worker">Buscar Contrato</button>
+
+        </div>
+        <p>{{mensaje}}</p>
+    </form>
+</div>
