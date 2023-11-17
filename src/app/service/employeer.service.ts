@@ -12,6 +12,14 @@ export class EmployeerModelService {
   // inyectando httpClient
   constructor(private http: HttpClient) { }
 
+  list() : Observable<any>{
+    return this.http.get<EmployeerModel[]> (this.url + "listEmployers");
+  }
+
+  listId(id:number){
+    return this.http.get<EmployeerModel>(this.url+"worker/"+id);
+  }
+
   insert(EmployeerModel:EmployeerModel){
     return this.http.post(this.url+ 'employeer/register', EmployeerModel);
   }
@@ -20,6 +28,14 @@ export class EmployeerModelService {
   }
   delete(id:string){
     return this.http.delete(this.url + "EmployeerModel/" + id);
+  }
+
+  setList(listaNueva : EmployeerModel[]){
+    this.listaCambio.next(listaNueva);//enviar la nueva lista a los suscriptores
+  }
+
+  getList(){
+    return this.listaCambio.asObservable();
   }
 
 }

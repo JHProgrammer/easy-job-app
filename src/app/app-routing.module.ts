@@ -5,6 +5,8 @@ import { PagePrincipalComponent } from './page-principal/page-principal/page-pri
 import { CreateEditComponent } from './employeer/create-edit/create-edit.component';
 import { WorkerComponent } from './worker/worker.component';
 import { WorkerCreateEditComponent } from './worker/worker-create-edit/worker-create-edit.component'; 
+import { OccupationComponent } from './occupation/occupation.component';
+import { EmployeerComponent } from './employeer/employeer.component';
 
 const routes: Routes = [
   {
@@ -12,8 +14,20 @@ const routes: Routes = [
     component: PagePrincipalComponent
   },
   {
-    path: 'employeerAdd',
-    component: CreateEditComponent
+    path: 'home', 
+    component: PagePrincipalComponent
+  },
+  {
+    path: 'employeer',
+    component: EmployeerComponent,
+    children: [
+      {
+        path: 'edicion/:id', component: CreateEditComponent
+      },
+      {
+        path:'nuevo', component: CreateEditComponent
+      },
+    ]
   },
   {
     path: 'worker',
@@ -25,6 +39,10 @@ const routes: Routes = [
         path:'nuevo', component: WorkerCreateEditComponent
       },
     ]
+  },
+  {
+    path: 'occupation',
+    component: OccupationComponent
   },
   
 ]

@@ -1,0 +1,13 @@
+.searchNav {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.inputSearch{
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

@@ -40,7 +40,13 @@ import { ListServiceContractComponent } from './employeer/list-service-contract/
 import { ListServiceContractsPerDateComponent } from './employeer/list-service-contracts-per-date/list-service-contracts-per-date.component';
 import { RegisterContractComponent } from './worker/register-contract/register-contract.component';
 import { ListarContractMontoComponent } from './worker/listar-contract-monto/listar-contract-monto.component';
+import { OccupationComponent } from './occupation/occupation.component';
+import { OccupationListComponent } from './occupation/occupation-list/occupation-list.component';
 
+import {MatSelectModule} from '@angular/material/select';
+import { EmployeerComponent } from './employeer/employeer.component';
+import { EmployeerListComponent } from './employeer/employeer-list/employeer-list.component';
+import { EmployeerDialogComponent } from './employeer/employeer-dialog/employeer-dialog.component';
 
 
 @NgModule({
@@ -57,7 +63,12 @@ import { ListarContractMontoComponent } from './worker/listar-contract-monto/lis
     ListServiceContractComponent,
     ListServiceContractsPerDateComponent,
     RegisterContractComponent,
-    ListarContractMontoComponent
+    ListarContractMontoComponent,
+    OccupationComponent,
+    OccupationListComponent,
+    EmployeerComponent,
+    EmployeerListComponent,
+    EmployeerDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +86,8 @@ import { ListarContractMontoComponent } from './worker/listar-contract-monto/lis
     MatPaginatorModule,
     MatTableModule,
     MatDialogModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

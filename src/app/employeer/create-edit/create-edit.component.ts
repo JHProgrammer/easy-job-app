@@ -60,7 +60,7 @@ export class CreateEditComponent {
           // });
         });
       }
-      // this.router.navigate(['']);
+      this.router.navigate(['employeer']);
     } else {
       this.mensaje = 'Agregue campos omitidos';
     }
