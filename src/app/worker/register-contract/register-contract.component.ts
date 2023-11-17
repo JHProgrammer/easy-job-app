@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RegisterContractComponent {
   form: FormGroup = new FormGroup({});
   mensaje: string = '';
-  tipoAccion: string = '';
+  tipoAccion: string = 'Registrar';
   constructor(
     // private workerService: WorkerModelService,
     private router: Router,
@@ -18,5 +18,10 @@ export class RegisterContractComponent {
     // private occupationService: OccupationService
   ) {}
 
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+
+  }
   onSubmit(){}
 }

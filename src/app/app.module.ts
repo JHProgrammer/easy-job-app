@@ -48,6 +48,8 @@ import { EmployeerComponent } from './employeer/employeer.component';
 import { EmployeerListComponent } from './employeer/employeer-list/employeer-list.component';
 import { EmployeerDialogComponent } from './employeer/employeer-dialog/employeer-dialog.component';
 
+import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -87,7 +89,8 @@ import { EmployeerDialogComponent } from './employeer/employeer-dialog/employeer
     MatTableModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatSelectModule
+    MatSelectModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
