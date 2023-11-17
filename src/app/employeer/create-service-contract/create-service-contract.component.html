@@ -6,17 +6,18 @@
         <br>
         <mat-form-field appearance="outline" class="fieldFormCU">
             <mat-label>Ingresa tu ID</mat-label>
-            <input matInput placeholder="ID" formControlName="serviceType">
+            <input matInput placeholder="ID" formControlName="employeer_id">
         </mat-form-field>
 
             <mat-hint>MM/DD/YYYY</mat-hint>
         <br>
         <mat-form-field appearance="outline" class="fieldFormCU">
             <mat-label>Selecciona la fecha</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="employeer">
+            <input matInput placeholder="Fecha" formControlName="service_date">
+            <!-- <input matInput [matDatepicker]="picker" formControlName="employeer"> -->
 
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <!-- <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker> -->
           </mat-form-field>
         <br>
 

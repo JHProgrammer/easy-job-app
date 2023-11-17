@@ -7,6 +7,7 @@
           <input matInput (keyup) = "filtrar($event)" placeholder="Buscar Por Fecha">
           
       </mat-form-field>
+      <button class="btCreateWorker"  mat-raised-button [routerLink]="'/employeer/addContract'">Nuevo</button>
     </div>
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>

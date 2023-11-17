@@ -10,6 +10,7 @@ import { EmployeerComponent } from './employeer/employeer.component';
 import { ListServiceContractsPerDateComponent } from './employeer/list-service-contracts-per-date/list-service-contracts-per-date.component';
 import { RegisterContractComponent } from './worker/register-contract/register-contract.component';
 import { ListarContractMontoComponent } from './worker/listar-contract-monto/listar-contract-monto.component';
+import { CreateServiceContractComponent } from './employeer/create-service-contract/create-service-contract.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,9 @@ const routes: Routes = [
       },
       {
         path:'contractService', component: ListServiceContractsPerDateComponent
+      },
+      {
+        path: 'addContract', component: CreateServiceContractComponent
       }
     ]
   },
