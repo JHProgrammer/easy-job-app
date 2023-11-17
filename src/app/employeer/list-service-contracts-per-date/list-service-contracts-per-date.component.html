@@ -10,23 +10,24 @@
     </div>
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>
+
         <!-- IDContract Column -->
-        <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
-          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        <ng-container matColumnDef="employer_id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Empleador Id</th>
+          <td mat-cell *matCellDef="let element">{{ element.employer_id }}</td>
         </ng-container>
-  
+
         <!-- Fecha Column -->
-        <ng-container matColumnDef="serviceDate">
+        <ng-container matColumnDef="service_date">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha de servicio</th>
-          <td mat-cell *matCellDef="let element">{{ element.serviceDate }}</td>
+          <td mat-cell *matCellDef="let element">{{ element.service_date }}</td>
         </ng-container>
   
         <!-- Descripción Column -->
-        <ng-container matColumnDef="descService">
+        <ng-container matColumnDef="desc_service">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Descripcion</th>
           <td mat-cell *matCellDef="let element">
-            {{ element.descService }}
+            {{ element.desc_service }}
           </td>
         </ng-container>
   

@@ -7,6 +7,7 @@ import { WorkerComponent } from './worker/worker.component';
 import { WorkerCreateEditComponent } from './worker/worker-create-edit/worker-create-edit.component'; 
 import { OccupationComponent } from './occupation/occupation.component';
 import { EmployeerComponent } from './employeer/employeer.component';
+import { ListServiceContractsPerDateComponent } from './employeer/list-service-contracts-per-date/list-service-contracts-per-date.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,9 @@ const routes: Routes = [
       {
         path:'nuevo', component: CreateEditComponent
       },
+      {
+        path:'contractService', component: ListServiceContractsPerDateComponent
+      }
     ]
   },
   {
