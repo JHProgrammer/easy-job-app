@@ -12,11 +12,9 @@ import { Router } from '@angular/router';
 })
 export class ListarContractMontoComponent {
   displayedColumns = [
-    'nameEmployer',
-    'age_employer',
-    'city_employer',
-    'phone_employer',
-    'email_employer',
+    'worker_id',
+    'service_contract_id',
+    'monto',
   ];
   // dataSource = new MatTableDataSource<EmployeerModel>();
   dataSource = new MatTableDataSource();
