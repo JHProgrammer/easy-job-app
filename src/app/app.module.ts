@@ -39,6 +39,9 @@ import { OccupationComponent } from './occupation/occupation.component';
 import { OccupationListComponent } from './occupation/occupation-list/occupation-list.component';
 
 import {MatSelectModule} from '@angular/material/select';
+import { EmployeerComponent } from './employeer/employeer.component';
+import { EmployeerListComponent } from './employeer/employeer-list/employeer-list.component';
+import { EmployeerDialogComponent } from './employeer/employeer-dialog/employeer-dialog.component';
 
 
 @NgModule({
@@ -52,7 +55,10 @@ import {MatSelectModule} from '@angular/material/select';
     DialogoComponent,
     WorkerCreateEditComponent,
     OccupationComponent,
-    OccupationListComponent
+    OccupationListComponent,
+    EmployeerComponent,
+    EmployeerListComponent,
+    EmployeerDialogComponent
   ],
   imports: [
     BrowserModule,

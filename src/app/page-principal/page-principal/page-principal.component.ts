@@ -16,7 +16,7 @@ onRegisterWorker() {
   ) {}
 
   onRegisterEmployeer() {
-    this.router.navigate(['/employeerAdd'])
+    this.router.navigate(['/employeer'])
   };
 
 }
