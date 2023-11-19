@@ -10,7 +10,7 @@
       <button class="btCreateWorker"  mat-raised-button [routerLink]="'/worker/nuevo'">Nuevo</button>
     </div>
     <div class="mat-elevation-z8">
-      <table mat-table [dataSource]="dataSource" matSort>
+      <table mat-table [dataSource]!="dataSource" matSort>
         <!-- ID Column -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>

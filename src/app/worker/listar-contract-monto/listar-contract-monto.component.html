@@ -14,13 +14,13 @@
     <table mat-table [dataSource]="dataSource" matSort>
         <!-- Monto Column -->
         <ng-container matColumnDef="worker_id">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Monto</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ID Worker</th>
             <td mat-cell *matCellDef="let element">{{ element.worker_id }}</td>
         </ng-container>
 
         <!-- ID Column -->
         <ng-container matColumnDef="service_contract_id">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Id Service Contract</th>
           <td mat-cell *matCellDef="let element">{{ element.service_contract_id }}</td>
         </ng-container>
 
@@ -33,7 +33,7 @@
         </ng-container> -->
         <!-- Celular Column -->
         <ng-container matColumnDef="monto">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Celular</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Monto</th>
             <td mat-cell *matCellDef="let element">
         {{ element.monto }}
             </td>
