@@ -8,7 +8,7 @@ import { Router } from '@angular/router'
 })
 export class PagePrincipalComponent {
 onRegisterWorker() {
-  this.router.navigate(['/worker'])
+  this.router.navigate(['/worker/nuevo'])
 }
   
   constructor (
@@ -16,7 +16,7 @@ onRegisterWorker() {
   ) {}
 
   onRegisterEmployeer() {
-    this.router.navigate(['/employeer'])
+    this.router.navigate(['/employeer/nuevo'])
   };
 
 }

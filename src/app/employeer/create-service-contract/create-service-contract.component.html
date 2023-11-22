@@ -1,11 +1,14 @@
 <div class="create-service-contract">
     
     <form (ngSubmit)="onSubmit()" [formGroup]="form">
-        <mat-label class="titleForm">CREA TU CONTRATO</mat-label>
+        <mat-label style="text-align: center" class="titleForm">CREA TU CONTRATO</mat-label>
         <br>
+        <br>
+        <br>
+            <mat-hint>ID</mat-hint>
         <br>
         <mat-form-field appearance="outline" class="fieldFormCU">
-            <mat-label>Ingresa tu ID</mat-label>
+            <mat-label>Ingresa tu ID de empleador</mat-label>
             <input matInput placeholder="ID" formControlName="employeer_id">
         </mat-form-field>
 
@@ -20,7 +23,7 @@
             <mat-datepicker #picker></mat-datepicker> -->
           </mat-form-field>
         <br>
-
+            <mat-hint>Descripción</mat-hint>
         <br>
         <mat-form-field appearance="outline" class="fieldFormCU">
             <mat-label>Ingresa una descripción</mat-label>

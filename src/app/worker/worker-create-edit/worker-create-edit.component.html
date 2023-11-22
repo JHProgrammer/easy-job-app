@@ -78,38 +78,18 @@
     <br />
     <mat-form-field class="example-full-width" class="fieldFormCU">
       <mat-label>Ocupación</mat-label>
-      <mat-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="occup">
+      <mat-select placeholder="Elige una ocupación" [(ngModel)]="selectedValue" name="occup">
         <mat-option *ngFor="let occup of occupations" [value]="occup.name_occupation">
           {{occup.name_occupation}}
         </mat-option>
       </mat-select>
     </mat-form-field>
     <br />
-    <mat-form-field class="example-full-width" class="fieldFormCU">
-      <mat-label>Ciudad</mat-label>
-      <input
-        matInput
-        required
-        placeholder="Ciudad"
-        formControlName="city_worker"
-      />
-    </mat-form-field>
-    <br />
-    <mat-form-field class="example-full-width" class="fieldFormCU">
-      <mat-label>Ciudad</mat-label>
-      <input
-        matInput
-        required
-        placeholder="Ciudad"
-        formControlName="city_worker"
-      />
-    </mat-form-field>
-    <br />
     <div class="groupButton">
       <button mat-raised-button type="submit" color="primary">
         {{ tituloBoton }}
       </button>
-      <button mat-raised-button color="warn" routerLink="/authors">
+      <button mat-raised-button color="warn" routerLink="/worker">
         Cancelar
       </button>
     </div>
