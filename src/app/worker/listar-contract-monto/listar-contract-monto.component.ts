@@ -4,6 +4,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { serviceContractWorker } from 'src/app/model/serviceContractWorker';
+import { WorkerModelService } from 'src/app/service/worker.service';
 
 @Component({
   selector: 'app-listar-contract-monto',
@@ -17,16 +19,28 @@ export class ListarContractMontoComponent {
     'monto',
   ];
   // dataSource = new MatTableDataSource<EmployeerModel>();
-  dataSource = new MatTableDataSource();
+  dataSource = new MatTableDataSource<serviceContractWorker>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-
-  constructor(
-    // private employeerService: EmployeerModelService,
-    private router: Router,
-    private dialog: MatDialog
-  ) {
-    console.log('Load Constructor');
+  constructor(private workerService: WorkerModelService, 
+               private router: Router,
+               private dialog:MatDialog
+               ){
+      console.log("Load Constructor");
   }
-  filtrar($event: KeyboardEvent) {}
+
+  ngOnInit(): void {
+    this.workerService.listServContractW().subscribe(data => this.dataSource.data = data);
+    //me suscribo
+    this.workerService.getListServContractW().subscribe(data => {
+      this.dataSource.data = data;
+    });
+  }
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+ }
+ filtrar(e:any){
+   this.dataSource.filter = e.target.value.trim();
+ }
 }
